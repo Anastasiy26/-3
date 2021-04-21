@@ -4,7 +4,7 @@
 
 <object width="25%" height="90%" class="Menu" {{hidden}}>
     <ul>
-        <center><button>Редактор блок-схем</button></center>
+        <center><a href="/{{name}}/profile/Editor">Редактор блок-схем</a></center>
     </ul>
 </object>
 
@@ -83,15 +83,14 @@
             </svg>
         </button>
     </div>
-    <input type="submit" name="SignUp" value="Регистрация">
-    <input type="submit" name="SignIn" value="Вход">
+    <input type="submit" name="Name" value="{{name}}">
 </form>
 
 <center>
-    Привет, гость, на этом сайте вы можете найти много интереных для нас (разработчиков сайта) вещей. <br>
+    Привет, {{name}}, на этом сайте вы можете найти много интереных для нас (разработчиков сайта) вещей. <br>
     Например, вы можете опробовать редактор блок-схем и конвертер их в паскаль <br>
     о для начала работы с этим инструментом вы должны войти или зарегистрироваться. <br>
-    Для гостей не доступен функционал сайта.
+    {{functional}}
 </center>
 
 {% endblock %}

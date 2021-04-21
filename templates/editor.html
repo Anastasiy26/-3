@@ -4,7 +4,7 @@
 
 <object width="25%" height="90%" class="Menu" {{hidden}}>
     <ul>
-        <center><button>Редактор блок-схем</button></center>
+        <center><a href="/{{name}}/">Профиль</a></center>
     </ul>
 </object>
 
@@ -83,16 +83,28 @@
             </svg>
         </button>
     </div>
-    <input type="submit" name="SignUp" value="Регистрация">
-    <input type="submit" name="SignIn" value="Вход">
+    <input type="submit" name="Name" value="{{name}}"> <br>
 </form>
 
-<center>
-    Привет, гость, на этом сайте вы можете найти много интереных для нас (разработчиков сайта) вещей. <br>
-    Например, вы можете опробовать редактор блок-схем и конвертер их в паскаль <br>
-    о для начала работы с этим инструментом вы должны войти или зарегистрироваться. <br>
-    Для гостей не доступен функционал сайта.
-</center>
-
+<canvas class="Drawer" id="Canvas">Привет</canvas>
+<form method="post">
+    <select id="Choise" name="List">
+        <option value="Начало">Начало</option>
+        <option value="Конец">Конец</option>
+        <option value="Условие">Условие</option>
+        <option value="Цикл">Цикл</option>
+        <option value="Ввод/вывод">Ввод/вывод</option>
+        <option value="Объявление">Объявление</option>
+        <option value="Функция">Функция</option>
+    </select>
+    <object class="Manager" width="10%" height="14%">
+        <button id="but1" name="but1">1</button>
+        <button id="but2" name="but2">2</button>
+        <button id="but3" name="but3">3</button>
+        <button id="but4" name="but4">4</button>
+        <button id="but5" name="but5">5</button>
+</object>
+</form>
+<script src="{{url_for('static', filename='js/editor-script.js')}}?{{v_num_canvas}}"></script>
 {% endblock %}
 
