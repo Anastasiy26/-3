@@ -12,7 +12,6 @@ port = 8080
 host = '127.0.0.1'
 with open("static/resourses/version_num", "r") as file:
     v_num_canvas = int(file.read())
-
 with open("static/js/editor-script.js", "w") as file:
     pass
 
