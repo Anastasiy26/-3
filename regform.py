@@ -5,6 +5,7 @@ from data.users import User
 from data import db_session
 
 
+
 class RegForm(FlaskForm):
     username = StringField('Введите логин', validators=[DataRequired()])
     password = PasswordField('Пароль', validators=[DataRequired()])
